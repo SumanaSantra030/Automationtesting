@@ -1,0 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+PATH ="C:\Program Files (x86)\chromedriver.exe"
+driver = webdriver.Chrome(PATH)
+driver.get("https://www.redbus.in/")
+
+source = driver.find_element_by_id("src")
+source.send_keys("Jodhpur")
+source.send_keys(Keys.INSERT)
+
+destination = driver.find_element_by_id('dest')
+destination.send_keys("Mumbai")
+destination.send_keys(Keys.INSERT)
